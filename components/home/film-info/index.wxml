@@ -1,0 +1,20 @@
+<view class="container font-color-f">
+  <view class="flex">
+    <image src="http://img.meipingmi.com.cn/upload/2019-10-15/1571101465125GAKv.jpg?x-oss-process=image/resize,h_1000/format,jpg"
+           mode="aspectFill"
+           class="avatar"></image>
+    <view class="flex space-between flex-column p20">
+      <view class="font-size-48 font-weight-600">名侦探柯南</view>
+      <view class="font-size-20">mingzhengtan kenan</view>
+      <view class="flex mt60">
+        <view class="font-size-24 mr10">美团</view>
+        <view class="font-size-36 text-score mr30">9.3</view>
+        <view class="font-size-24 mr10">猫眼</view>
+        <view class="font-size-36 text-score">9.3</view>
+      </view>
+      <view class="font-size-24 mt6">冒险 奇幻 家庭</view>
+      <view class="font-size-24 mt6">美国/119分钟</view>
+      <view class="font-size-24 mt6">2019-09-12大陆上映</view>
+    </view>
+  </view>
+</view>

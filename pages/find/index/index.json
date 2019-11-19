@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "影吧",
+  "usingComponents": {
+    "qike-film-item": "/components/find/film-item/index"
+  }
+}

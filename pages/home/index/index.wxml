@@ -1,0 +1,12 @@
+<swiper class="swiper"
+        vertical="{{true}}"
+        bindanimationfinish="animationfinish">
+    <block wx:for="{{list}}" wx:key="*this">
+        <swiper-item class="swiper-item" item-id="{{index}}">
+            <navigator url="/pages/home/detail/index?id=222"
+                       class="box border-shadow">
+                <qike-recommend-item></qike-recommend-item>
+            </navigator>
+        </swiper-item>
+    </block>
+</swiper>

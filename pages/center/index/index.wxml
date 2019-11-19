@@ -1,0 +1,31 @@
+<!--avatarUrl nickName-->
+<view class="flex info-box flex-column align-center">
+  <image src="{{userInfo.avatarUrl}}"
+         mode="aspectFill"
+         class="avatar mt20"></image>
+  <view class="mt40 flex full-width mb20">
+    <view class="flex-1 flex space-between align-center flex-column">
+      <image src="../../../images/icons/info.png" class="info-icon"></image>
+      <view class="font-28-666">关于我们</view>
+    </view>
+    <view class="flex-1">
+      <view class="flex-1 flex space-between align-center flex-column">
+        <view class="font-size-36 font-color-6">256</view>
+        <view class="font-28-666">喜欢</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<view class="font-32-333 text-center mt40 container">喜欢</view>
+<view class="flex flex-wrap">
+  <block wx:for="{{10}}">
+    <view class="item">
+      <navigator class="border-shadow"
+                 url="/pages/home/detail/index?id=222">
+        <qike-film-item></qike-film-item>
+      </navigator>
+    </view>
+  </block>
+</view>

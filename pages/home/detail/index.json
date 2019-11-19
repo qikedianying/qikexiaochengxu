@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#5e5f63",
+  "usingComponents": {
+    "qike-film-info": "/components/home/film-info/index",
+    "qike-member-list": "/components/home/member-list/index",
+    "qike-comment": "/components/home/comment/index"
+  }
+}

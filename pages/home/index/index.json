@@ -1,0 +1,7 @@
+{
+  "disableScroll": true,
+  "navigationBarTitleText": "流行",
+  "usingComponents": {
+    "qike-recommend-item": "/components/home/recommend-item/index"
+  }
+}

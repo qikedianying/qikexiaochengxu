@@ -1,0 +1,20 @@
+<view class="box">
+  <image src="http://img.meipingmi.com.cn/upload/2019-10-15/1571101465125GAKv.jpg?x-oss-process=image/resize,h_1000/format,jpg"
+         mode="aspectFill"
+         class="avatar"></image>
+
+  <view class="info flex space-between flex-column">
+    <view class="font-size-24 font-weight-600">名侦探柯南</view>
+    <view class="flex space-between align-center">
+      <view>
+        <text class="font-size-20 mr5">评分</text>
+        <text class="font-size-24 text-score mr30">9.3</text>
+      </view>
+      <view class="font-size-20 font-color-f">
+        <text class="mr5">24</text>
+        <text>喜欢</text>
+      </view>
+    </view>
+  </view>
+
+</view>

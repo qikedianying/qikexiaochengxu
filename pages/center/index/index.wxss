@@ -1,0 +1,29 @@
+.avatar{
+  height: 200rpx;
+  width: 200rpx;
+  border-radius: 200rpx;
+}
+.info-icon{
+  width: 36rpx;
+  height: 36rpx;
+}
+.info-box{
+  background: #fff;
+}
+page{
+  height: 100%;
+  background: #f9f9f9;
+}
+.item{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-bottom: 40rpx;
+}
+.item:nth-child(odd){
+  padding-left: 30rpx;
+}
+.item:nth-child(even){
+  padding-right: 30rpx;
+}

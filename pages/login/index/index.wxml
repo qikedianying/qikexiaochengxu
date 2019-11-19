@@ -1,0 +1,22 @@
+<!--<button open-type="getUserInfo" bindgetuserinfo="getUserinfo">登入</button>-->
+<view class="page">
+  <view>
+    <image src='../../../images/login/logo.png'
+           mode="widthFix" class="font-image"></image>
+    <view class="font-size-36 font-weight-600 mt20 text-center">欢迎使用契客电影</view>
+  </view>
+
+
+  <view class="bottom-box mb50">
+    <button class="submit button"
+            hover-class="submit-hover"
+            bindgetuserinfo='getUserinfo'
+            open-type="getUserInfo">微信登入</button>
+
+    <navigator url="/pages/home/index/index"
+               open-type="switchTab"
+               class="font-size-26 font-color-b text-center container"
+               bindtap="someView">随便看看</navigator>
+  </view>
+
+</view>

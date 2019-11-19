@@ -1,0 +1,16 @@
+@import "../../../wxss/index.wxss";
+.avatar{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 80rpx;
+}
+.zan-box{
+  height: 40rpx;
+  line-height: 40rpx;
+  width: 120rpx;
+  text-align: center;
+  border-radius: 40rpx;
+  font-size: 22rpx;
+  color: #999;
+  border: 2rpx solid #e9e9e9;
+}

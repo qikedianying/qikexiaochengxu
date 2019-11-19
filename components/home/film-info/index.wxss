@@ -1,0 +1,11 @@
+@import "../../../wxss/index.wxss";
+.avatar{
+  width: 240rpx;
+  height: 360rpx;
+  margin-right: 10rpx;
+}
+
+.text-score{
+  position: relative;
+  top: -10rpx;
+}

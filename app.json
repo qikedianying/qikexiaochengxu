@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/login/index/index",
+    "pages/home/index/index",
+    "pages/find/index/index",
+    "pages/center/index/index",
+    "pages/home/detail/index",
+    "pages/h5/dynamic/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "契客电影",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#fff",
+    "backgroundColor": "#333",
+    "color": "#8a8a8a",
+    "list": [
+      {
+        "iconPath": "images/tabbar/home.png",
+        "selectedIconPath": "images/tabbar/home_active.png",
+        "pagePath": "pages/home/index/index",
+        "text": "流行"
+      },
+      {
+        "iconPath": "images/tabbar/find.png",
+        "selectedIconPath": "images/tabbar/find_active.png",
+        "pagePath": "pages/find/index/index",
+        "text": "影吧"
+      },
+      {
+        "iconPath": "images/tabbar/center.png",
+        "selectedIconPath": "images/tabbar/center_active.png",
+        "pagePath": "pages/center/index/index",
+        "text": "喜欢"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
