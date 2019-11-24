@@ -15,8 +15,7 @@
 
     <navigator url="/pages/home/index/index"
                open-type="switchTab"
-               class="font-size-26 font-color-b text-center container"
-               bindtap="someView">随便看看</navigator>
+               class="font-size-26 font-color-b text-center container">随便看看</navigator>
   </view>
 
 </view>

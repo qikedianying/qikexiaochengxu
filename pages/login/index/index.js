@@ -1,27 +1,37 @@
+import {login, loginSuccessHandle} from "../../../model/login";
+const app = getApp()
 Page({
   data: {
-    type: ''
+
   },
   onLoad: function (options) {
-    let type = +options.type
-    this.setData({
-      type
-    })
 
   },
-  getUserinfo (e) {
-    console.log(e)
+  getWxCode() {
+    return new Promise((resolve, reject) => {
+      wx.login({
+        success: res => {
+          resolve(res.code)
+        },
+        fail: err => {
+          reject(err)
+        }
+      })
+    })
+  },
+  async getUserinfo (e) {
     if (e.detail.errMsg === "getUserInfo:ok") {
-      switch (this.data.type) {
-        case 1: wx.switchTab({
-          url: '/pages/center/index/index'
+      try {
+        const code = await this.getWxCode()
+        const data = await login.login({
+          code,
+          encryptedData: e.detail.encryptedData,
+          iv: e.detail.iv,
         })
+        loginSuccessHandle(data, app.globalData.shareData)
+      }catch (e) {
+        console.log(e)
       }
     }
-    console.log(e)
-  },
-
-  // someView () {
-  //   wx.sw
-  // }
+  }
 })

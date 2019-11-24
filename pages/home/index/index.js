@@ -1,3 +1,5 @@
+import {movie} from "../../../model/movie";
+
 Page({
 
   data: {
@@ -6,20 +8,29 @@ Page({
   },
 
   onLoad: function (options) {
-
+    this.getMovie()
   },
-
-
-  animationfinish(e) {
-    if (e.detail.current === this.data.current) {
-      wx.showToast({
-        title: '没有更多啦',
-        icon: 'none'
+  async getMovie() {
+    try {
+      const list = await movie.getPopular()
+      this.setData({
+        list
       })
-    } else {
-      this.data.current = e.detail.current
+    }catch (e) {
+      console.log(e)
     }
   },
+
+  // animationfinish(e) {
+  //   if (e.detail.current === this.data.current) {
+  //     wx.showToast({
+  //       title: '没有更多啦',
+  //       icon: 'none'
+  //     })
+  //   } else {
+  //     this.data.current = e.detail.current
+  //   }
+  // },
 
   onShareAppMessage: function () {
 

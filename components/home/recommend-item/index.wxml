@@ -1,18 +1,18 @@
 <view class="box">
     <image class="full-width full-height"
-            src="http://img.meipingmi.com.cn/upload/2019-10-15/1571101465125GAKv.jpg?x-oss-process=image/resize,h_1000/format,jpg"
+            src="{{movie.face}}"
            mode="aspectFill"></image>
     <view class="info flex space-between flex-column">
-        <view class="font-size-48 font-weight-600">名侦探柯南</view>
-        <view class="font-size-20">mingzhengtan kenan</view>
+        <view class="font-size-48 font-weight-600">{{movie.name}}</view>
+        <view class="font-size-20">{{movie.english_name}}</view>
         <view class="flex mt60">
             <view class="font-size-24 mr10">美团</view>
-            <view class="font-size-36 text-score mr30">9.3</view>
+            <view class="font-size-36 text-score mr30">{{movie.mei_score}}</view>
             <view class="font-size-24 mr10">猫眼</view>
-            <view class="font-size-36 text-score">9.3</view>
+            <view class="font-size-36 text-score">{{movie.mao_score}}</view>
         </view>
-        <view>冒险 奇幻 家庭</view>
-        <view>美国 / 119分钟</view>
-        <view>2019-09-12 大陆上映</view>
+        <view>{{movie.label}}</view>
+        <view>{{movie.address}} / {{movie.movie_length}}分钟</view>
+        <view>{{movie.release_time}} {{movie.release_country}}</view>
     </view>
 </view>
