@@ -1,66 +1,47 @@
-// pages/find/index/index.js
+import {movie} from "../../../model/movie";
+import {getDefaultShareData} from "../../../utils/util";
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    movieList: [],
+    pageNum: 1,
+    hasMore: true
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
+    this.getList()
+  },
+  async getList() {
+
+    if (this.data.hasMore) {
+      wx.showNavigationBarLoading()
+      try {
+        const movieList = await movie.getList(this.data.pageNum)
+        const data = movieList.rows.filter(item => item.type !== -1)
+        if (data.length === 0) {
+          this.data.hasMore = false
+          return
+        }
+        this.setData({
+          movieList: [...this.data.movieList, ...data]
+        })
+      }catch (e) {
+        console.log(e)
+      } finally {
+        wx.hideNavigationBarLoading()
+      }
+    } else {
+      wx.showToast({
+        title: '没有更多啦',
+        icon: 'none'
+      })
+    }
 
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  onReachBottom() {
+    this.data.pageNum++
+    this.getList()
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
   onShareAppMessage: function () {
-
+    return getDefaultShareData()
   }
 })

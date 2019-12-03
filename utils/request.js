@@ -1,4 +1,5 @@
 import config  from '../config/env'
+const app = getApp()
 class HTTP {
   constructor () {
     this.baseUrl = config.API_URL
@@ -18,10 +19,9 @@ class HTTP {
       data,
       method,
       header: {
-
+        token: app.globalData.userinfo.token
       },
       success: res => {
-
         if (res.data.code === 200) {
           resolve(res.data.data)
         } else{
@@ -41,7 +41,7 @@ class HTTP {
         reject(err)
       },
       complete: res => {
-        console.log(url, res, data)
+        console.log(url, res, data, app.globalData.userinfo)
       }
     })
   }

@@ -6,7 +6,9 @@
     "pages/find/index/index",
     "pages/center/index/index",
     "pages/home/detail/index",
-    "pages/h5/dynamic/index"
+    "pages/h5/dynamic/index",
+    "pages/home/article/index",
+    "pages/home/contact/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -30,12 +32,6 @@
         "selectedIconPath": "images/tabbar/find_active.png",
         "pagePath": "pages/find/index/index",
         "text": "影吧"
-      },
-      {
-        "iconPath": "images/tabbar/center.png",
-        "selectedIconPath": "images/tabbar/center_active.png",
-        "pagePath": "pages/center/index/index",
-        "text": "喜欢"
       }
     ]
   },

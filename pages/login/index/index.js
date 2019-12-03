@@ -1,11 +1,13 @@
 import {login, loginSuccessHandle} from "../../../model/login";
+import {getDefaultShareData} from "../../../utils/util";
 const app = getApp()
 Page({
   data: {
-
+    code: ''
   },
-  onLoad: function (options) {
-
+  onLoad: async function (options) {
+    const code = await this.getWxCode()
+    this.data.code = code
   },
   getWxCode() {
     return new Promise((resolve, reject) => {
@@ -22,9 +24,8 @@ Page({
   async getUserinfo (e) {
     if (e.detail.errMsg === "getUserInfo:ok") {
       try {
-        const code = await this.getWxCode()
         const data = await login.login({
-          code,
+          code: this.data.code,
           encryptedData: e.detail.encryptedData,
           iv: e.detail.iv,
         })
@@ -33,5 +34,8 @@ Page({
         console.log(e)
       }
     }
+  },
+  onShareAppMessage: function () {
+    return getDefaultShareData()
   }
 })

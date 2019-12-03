@@ -1,0 +1,14 @@
+<view>
+  <block wx:for="{{articleList}}">
+    <view class="container bottom-line" data-src="{{item.url}}" bindtap="goArticle">
+      <view class="flex">
+        <view class="flex-1 pr20 font-28-333 font-weight-600">{{item.title}}</view>
+        <view class="zan-box" wx:if="{{hasLogin}}"
+              catchtap="zan"
+              data-id="{{item.movie_id}}"
+              data-article="{{item.id}}">赞 {{item.zan_count}}</view>
+      </view>
+      <view class="pt20 font-ellipsis font-24-999">{{item.content}}</view>
+    </view>
+  </block>
+</view>

@@ -1,12 +1,12 @@
 <scroll-view scroll-x="true"
              class="box flex space-between">
-  <block wx:for="{{10}}" wx:key="{{item}}">
+  <block wx:for="{{performer}}" wx:key="{{item}}">
     <view class="item">
       <image class="avatar"
-             src="http://img.meipingmi.com.cn/upload/2019-10-15/1571101465125GAKv.jpg?x-oss-process=image/resize,h_1000/format,jpg"
+             src="{{item.avatar}}"
              mode="aspectFill"></image>
-      <view class="font-ellipsis name font-28-333">云衣裤发送到</view>
-      <view class="font-ellipsis name font-24-999">云衣裤优选第三节课风科技时代来</view>
+      <view class="font-ellipsis name font-28-333">{{item.name}}</view>
+      <view class="font-ellipsis name font-24-999">{{item.row}}</view>
     </view>
   </block>
 </scroll-view>

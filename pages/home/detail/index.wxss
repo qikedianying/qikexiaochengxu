@@ -17,3 +17,6 @@
   transition: all 300ms linear;
   overflow: hidden;
 }
+.name{
+  flex:0 0 100rpx;
+}

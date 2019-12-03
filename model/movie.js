@@ -8,6 +8,20 @@ class Movie extends HTTP{
       url: 'movie/popular',
     })
   }
+
+  getDetail (id) {
+    return this.get({
+      url: 'movie/detail',
+      params: { id }
+    })
+  }
+
+  getList(pageNum) {
+    return this.get({
+      url: 'movie/list',
+      params: { pageNum }
+    })
+  }
 }
 
 const movie = new Movie()

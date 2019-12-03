@@ -1,9 +1,10 @@
 import {movie} from "../../../model/movie";
+import {getDefaultShareData} from "../../../utils/util";
 
 Page({
 
   data: {
-    list: [1, 1, 1, 1, 1, 1],
+    list: [],
     current: 0,
   },
 
@@ -20,7 +21,12 @@ Page({
       console.log(e)
     }
   },
-
+  currentChange(e) {
+    console.log(e)
+    this.setData({
+      current: e.detail.current
+    })
+  },
   // animationfinish(e) {
   //   if (e.detail.current === this.data.current) {
   //     wx.showToast({
@@ -33,6 +39,6 @@ Page({
   // },
 
   onShareAppMessage: function () {
-
+    return getDefaultShareData()
   }
 })

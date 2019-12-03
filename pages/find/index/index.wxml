@@ -1,12 +1,12 @@
 <view class="search"></view>
 
-<view class="font-32-333 text-center container">精选</view>
+<!--<view class="font-32-333 text-center container">精选</view>-->
 <view class="flex flex-wrap">
-  <block wx:for="{{10}}">
+  <block wx:for="{{movieList}}">
     <view class="item">
       <navigator class="border-shadow"
                  url="/pages/home/detail/index?id=222">
-        <qike-film-item></qike-film-item>
+        <qike-film-item movie="{{item}}"></qike-film-item>
       </navigator>
     </view>
   </block>

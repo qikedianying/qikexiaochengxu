@@ -3,6 +3,8 @@
   "usingComponents": {
     "qike-film-info": "/components/home/film-info/index",
     "qike-member-list": "/components/home/member-list/index",
-    "qike-comment": "/components/home/comment/index"
+    "qike-comment": "/components/home/comment/index",
+    "qike-article": "/components/home/article-list/index",
+    "van-dialog": "/miniprogram_npm/vant-weapp/dialog/index"
   }
 }

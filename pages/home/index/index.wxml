@@ -1,11 +1,21 @@
+
+<view class="icon-box flex flex-center" hidden="{{current === (list.length - 1)}}">
+  <image src="../../../images/icons/down.png"
+         mode="widthFix"
+         class="down-icon"></image>
+</view>
+
 <swiper class="swiper"
+        current="{{current}}"
+        bindchange="currentChange"
         vertical="{{true}}">
     <block wx:for="{{list}}" wx:key="*this">
         <swiper-item class="swiper-item" item-id="{{index}}">
-            <navigator url="/pages/home/detail/index?id=222"
+            <navigator url="/pages/home/detail/index?id={{item.id}}"
                        class="box border-shadow">
                 <qike-recommend-item movie="{{item}}"></qike-recommend-item>
             </navigator>
         </swiper-item>
     </block>
 </swiper>
+

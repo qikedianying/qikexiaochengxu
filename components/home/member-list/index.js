@@ -2,7 +2,7 @@
 Component({
 
   properties: {
-
+    performer: Array
   },
 
   data: {

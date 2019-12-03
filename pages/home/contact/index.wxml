@@ -1,0 +1,11 @@
+<!--<view class="bg-f mt20">-->
+  <!--<idol-cell cellname="复制客服微信号（qikechat）" bind:click="copyWechat" hiddenArrow="{{true}}"/>-->
+<!--</view>-->
+<view class="mt20 container">
+  <image src="../../../images/common/chat.jpg" bindtap="preview" class="chat" mode="widthFix"></image>
+</view>
+<view class="text-center font-28-999 bg-f pt30 pb30"
+      hover-class="bg-f9"
+      bindtap="copyWechat">
+  复制客服微信号
+</view>

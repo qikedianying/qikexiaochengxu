@@ -1,30 +1,50 @@
 <view class="info">
-  <qike-film-info></qike-film-info>
+  <qike-film-info movie-info="{{movieInfo}}"></qike-film-info>
   <view class="pl40 mt-20 pr40 flex space-between">
-    <view class="info-button flex-1 mr20">想看</view>
+    <button class="info-button button flex-1 mr20"
+            open-type="getUserInfo"
+            bindgetuserinfo='getUserinfo'
+            hidden="{{userinfo.token || movieInfo.type === 1}}">想看</button>
+    <view class="info-button flex-1 mr20"
+          hidden="{{!userinfo.token || movieInfo.type === 1}}"
+          bindtap="view">想看</view>
+    <navigator url="/pages/home/contact/index"
+               class="info-button flex-1 mr20"
+               hidden="{{movieInfo.type === 2}}">联系客服</navigator>
     <button class="button info-button flex-1 ml20"
             open-type="share">分享</button>
   </view>
 </view>
 
 <view class="container over-hidden font-28-666 bottom-line-20" bindtap="changeDescribeStatus">
-  <view class="describe" style="{{showDescribeMore ? 'height: auto': 'height: 80rpx'}}">
-    云衣库优选app官方安卓版是一款非常热门的手机服装批发软件，平台里面有很多丰富的一手货源，都是厂家直销的，
-    覆盖国内一级服装批发市场，广州十三行、杭州四季青、深圳南油、嘉兴濮院等，
-    想要服装创业，担心没有一手货源，使用这款批发软件，让你每天有后顾之忧的平台。
-  </view>
+  <view class="describe" style="{{showDescribeMore ? 'height: auto': 'height: 80rpx'}}">{{movieInfo.content}}</view>
 </view>
 
 <view class="pt30 pb30 bottom-line-20">
   <view class="pl40 mb20 font-32-333 font-weight-600">演职人员</view>
-  <qike-member-list></qike-member-list>
+  <qike-member-list performer="{{movieInfo.performer}}"></qike-member-list>
 </view>
 
 <view class="pt30 pb30">
-  <view class="pl40 mb20 font-32-333 font-weight-600">评论</view>
-  <block wx:for="{{10}}">
-    <view class="pb20 pt20 bottom-line">
-      <qike-comment></qike-comment>
-    </view>
-  </block>
+  <view class="pl40 mb20 font-32-333 font-weight-600">相关文章</view>
+  <qike-article articleList="{{movieInfo.article}}"></qike-article>
 </view>
+<van-dialog show="{{show}}"
+            use-slot
+            showConfirmButton="{{false}}"
+            title="百度云资源">
+  <view class="container">
+    <view class="flex">
+      <view class="font-28-333 pr20 name">链接</view>
+      <view class="font-28-999 font-ellipsis flex-1">{{movieInfo.baidu_yun}}</view>
+    </view>
+    <view class="flex mt20">
+      <view class="font-28-333 pr20 name">提取码</view>
+      <view class="font-28-999 flex-1">{{movieInfo.extract_code}}</view>
+    </view>
+
+    <view class="default-button mt40" bindtap="copyUrl">复制链接</view>
+  </view>
+
+
+</van-dialog>

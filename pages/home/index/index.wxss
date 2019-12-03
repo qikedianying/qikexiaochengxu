@@ -9,6 +9,8 @@ page {
 
 .swiper-item {
   padding: 60rpx;
+  padding-top: 40rpx;
+  padding-bottom: 80rpx;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,9 +21,29 @@ page {
 .box {
   width: 100%;
   box-sizing: border-box;
-  //height: 1000rpx;
   height: 100%;
   overflow: hidden;
   background: #fff;
   border-radius: 24rpx;
+}
+.icon-box{
+  position: fixed;
+  padding: 20rpx;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  animation: opcityChange 2s infinite;
+}
+.down-icon{
+  width: 40rpx;
+  height: auto;
+}
+
+
+@keyframes opcityChange {
+  0%   {opacity: 0;}
+  25% {opacity: .75;}
+  50%  {opacity: 1;}
+  75% {opacity: .75;}
+  100% {opacity: 0;}
 }
