@@ -29,7 +29,7 @@ Page({
           encryptedData: e.detail.encryptedData,
           iv: e.detail.iv,
         })
-        loginSuccessHandle(data, app.globalData.shareData)
+        loginSuccessHandle(data)
       }catch (e) {
         console.log(e)
       }

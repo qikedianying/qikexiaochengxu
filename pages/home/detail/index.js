@@ -109,7 +109,7 @@ Page({
     this.data.hasShare = true
     return {
       title: this.data.movieInfo.name,
-      path: `/pages/login/default/index?page=${SHARE_TYPE.DETAIL_PAGE}&id=${this.data.movieInfo.id}`,
+      path: `/pages/login/default/index?page=${SHARE_TYPE.DETAIL_PAGE}&id=${this.data.movieInfo.movie_id}`,
       imageUrl: this.data.movieInfo.face
     }
   }

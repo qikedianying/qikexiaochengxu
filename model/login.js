@@ -15,10 +15,11 @@ class Login extends HTTP{
 
 const login = new Login()
 
-const loginSuccessHandle = (result, shareData) => {
+const loginSuccessHandle = (result) => {
   app.globalData.userinfo = result
-  if (shareData.page) {
-    toPage(shareData, 'redirectTo')
+  console.log('shareData', app.globalData.shareData)
+  if (app.globalData.shareData.page) {
+    toPage(app.globalData.shareData, 'redirectTo')
   } else {
     wx.switchTab({
       url: '/pages/home/index/index'
@@ -29,7 +30,7 @@ const loginSuccessHandle = (result, shareData) => {
 const toPage = (params, func = 'navigateTo') => {
   switch (+params.page) {
     case SHARE_TYPE.DETAIL_PAGE: wx[func]({
-        url: '/pages/home/detail/index?id=' + shareData.id
+        url: '/pages/home/detail/index?id=' + app.globalData.shareData.id
       })
       app.globalData.shareData = {}
       return

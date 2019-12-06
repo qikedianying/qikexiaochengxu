@@ -14,8 +14,9 @@ Page({
       const data = await login.login({
         code, encryptedData, iv
       })
-      loginSuccessHandle(data, options)
+      loginSuccessHandle(data)
     } catch (e) {
+      console.log('e', e)
       if (!e.auth) {
         wx.redirectTo({
           url: '/pages/login/index/index'
