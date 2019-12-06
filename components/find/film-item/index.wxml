@@ -1,31 +1,22 @@
-<navigator url="/pages/home/detail/index?id={{movie.id}}"
+<navigator url="/pages/home/detail/index?id={{movie.movie_id}}"
            class="box">
   <image src="{{movie.face}}"
          mode="aspectFill"
          class="avatar"></image>
 
   <view class="info flex space-between flex-column">
-    <view class="font-size-24 font-weight-600">{{movie.name}}</view>
+    <view class="font-size-24 font-weight-600 font-ellipsis">{{movie.name}}</view>
     <view class="flex space-between align-center">
       <view>
-        <text class="font-size-20 mr5">综合评分</text>
-        <text class="font-size-24 text-score mr30">{{format.scoreFormat(movie.mei_score, movie.mao_score)}}</text>
+        <text class="font-size-20 mr5">猫眼评分</text>
+        <text class="font-size-24 text-score mr30">{{movie.score}}</text>
       </view>
-      <view class="font-size-20 font-color-f" hidden="{{true}}">
-        <text class="mr5">24</text>
-        <text>喜欢</text>
-      </view>
+      <!--<view class="font-size-20 font-color-f" hidden="{{true}}">-->
+        <!--<text class="mr5">24</text>-->
+        <!--<text>喜欢</text>-->
+      <!--</view>-->
     </view>
+    <view class="font-size-20">{{movie.pub_desc}}</view>
   </view>
 
 </navigator>
-<wxs module="format">
-  var scoreFormat = function(s1, s2) {
-    var average = parseInt((s1 + s2) / 2 * 100);
-    return  average / 100;
-  }
-
-  module.exports = {
-    scoreFormat: scoreFormat
-  }
-</wxs>

@@ -12,7 +12,7 @@
   height: 360rpx;
 }
 .info{
-  height: 100rpx;
+  /*height: 100rpx;*/
   position: absolute;
   background: rgba(0, 0, 0, .8);
   width: 100%;

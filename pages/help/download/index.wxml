@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="font-28-333">下载迅雷下载器，在百度上搜索迅雷下载，然后点击立即下载</view>
+  <image class="full-width mt20" mode="widthFix" src="https://imgsa.baidu.com/exp/w=500/sign=2954999d99cad1c8d0bbfc274f3f67c4/0824ab18972bd4072ce05a4f77899e510fb30958.jpg"></image>
+</view>
+<view class="container">
+  <view class="font-28-333">安装包下载完成后，双击迅雷安装包，点击运行迅雷安装包，然后点击“开始安装”安装迅雷下载器。</view>
+  <image class="full-width mt20" mode="widthFix" src="https://imgsa.baidu.com/exp/w=500/sign=bb84445edd00baa1ba2c47bb7711b9b1/d833c895d143ad4bf5aacf728e025aafa50f06ff.jpg"></image>
+</view>
+<view class="container">
+  <view class="font-28-333">然后打开迅雷下载器，点击“新建”按钮，将复制的链接地址粘贴进去，点击“立即下载”就可以用迅雷下载了。</view>
+  <image class="full-width mt20" mode="widthFix" src="https://imgsa.baidu.com/exp/w=500/sign=bf600895733e6709be0045ff0bc69fb8/34fae6cd7b899e511755cea64ea7d933c9950dac.jpg"></image>
+</view>

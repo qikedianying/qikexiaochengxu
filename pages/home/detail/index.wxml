@@ -4,10 +4,10 @@
     <button class="info-button button flex-1 mr20"
             open-type="getUserInfo"
             bindgetuserinfo='getUserinfo'
-            hidden="{{userinfo.token || movieInfo.type === 1}}">想看</button>
+            hidden="{{userinfo.token || movieInfo.type === 1}}">查看资源</button>
     <view class="info-button flex-1 mr20"
           hidden="{{!userinfo.token || movieInfo.type === 1}}"
-          bindtap="view">想看</view>
+          bindtap="view">查看资源</view>
     <navigator url="/pages/home/contact/index"
                class="info-button flex-1 mr20"
                hidden="{{movieInfo.type === 2}}">联系客服</navigator>
@@ -25,25 +25,35 @@
   <qike-member-list performer="{{movieInfo.performer}}"></qike-member-list>
 </view>
 
-<view class="pt30 pb30">
+<view class="pt30 pb30 bottom-line-20">
   <view class="pl40 mb20 font-32-333 font-weight-600">相关文章</view>
-  <qike-article articleList="{{movieInfo.article}}"></qike-article>
+  <view class="pl40 pr40 font-28-999">
+    <text>关注公众号</text>
+    <text class="font-color-3 font-weight-600" bindtap="copyName">契客电影</text>
+    <text>阅读相关文章</text>
+  </view>
+</view>
+
+<view class="pt30 pb30">
+  <view class="pl40 mb20 font-32-333 font-weight-600">精选评论</view>
+  <qike-comment comment="{{movieInfo.comment}}"></qike-comment>
 </view>
 <van-dialog show="{{show}}"
             use-slot
             showConfirmButton="{{false}}"
-            title="百度云资源">
+            title="资源链接">
   <view class="container">
     <view class="flex">
-      <view class="font-28-333 pr20 name">链接</view>
-      <view class="font-28-999 font-ellipsis flex-1">{{movieInfo.baidu_yun}}</view>
+      <!--<view class="font-28-333 pr20 name">资源地址</view>-->
+      <view class="font-28-999 flex-1">{{movieInfo.ftp_url}}</view>
     </view>
-    <view class="flex mt20">
-      <view class="font-28-333 pr20 name">提取码</view>
-      <view class="font-28-999 flex-1">{{movieInfo.extract_code}}</view>
-    </view>
+    <!--<view class="flex mt20">-->
+      <!--<view class="font-28-333 pr20 name">提取码</view>-->
+      <!--<view class="font-28-999 flex-1">{{movieInfo.extract_code}}</view>-->
+    <!--</view>-->
 
     <view class="default-button mt40" bindtap="copyUrl">复制链接</view>
+    <navigator class="down-load-button" url="/pages/help/download/index">如何下载</navigator>
   </view>
 
 

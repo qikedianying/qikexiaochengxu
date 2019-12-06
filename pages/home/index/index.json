@@ -2,6 +2,7 @@
   "disableScroll": true,
   "navigationBarTitleText": "流行",
   "usingComponents": {
-    "qike-recommend-item": "/components/home/recommend-item/index"
+    "qike-recommend-item": "/components/home/recommend-item/index",
+    "van-notice-bar": "/miniprogram_npm/vant-weapp/notice-bar/index"
   }
 }

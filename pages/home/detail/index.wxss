@@ -1,6 +1,7 @@
 .info{
-  height: 540rpx;
+  /*height: 540rpx;*/
   background:  linear-gradient(to bottom, #5e5f63, #383b40);
+  padding-bottom: 20rpx;
 }
 .info-button{
   height: 70rpx;
@@ -19,4 +20,12 @@
 }
 .name{
   flex:0 0 100rpx;
+}
+.down-load-button{
+  height: 88rpx;
+  margin-top: 10rpx;
+  line-height: 88rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #333333;
 }

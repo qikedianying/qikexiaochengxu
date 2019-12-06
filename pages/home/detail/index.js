@@ -27,7 +27,7 @@ Page({
    try {
      const movieInfo = await movie.getDetail(id)
      wx.setNavigationBarTitle({
-       title: movieInfo.title
+       title: movieInfo.name
      })
      this.setData({ movieInfo })
    } catch (e) {
@@ -65,10 +65,16 @@ Page({
   },
   copyUrl() {
     wx.setClipboardData({
-      data: this.data.movieInfo.baidu_yun
+      data: this.data.movieInfo.ftp_url
     })
     this.setData({
       show: false
+    })
+  },
+
+  copyName() {
+    wx.setClipboardData({
+      data: '契客电影'
     })
   },
 

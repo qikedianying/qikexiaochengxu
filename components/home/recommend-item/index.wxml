@@ -6,13 +6,11 @@
         <view class="font-size-48 font-weight-600">{{movie.name}}</view>
         <view class="font-size-20">{{movie.english_name}}</view>
         <view class="flex mt60">
-            <view class="font-size-24 mr10">美团</view>
-            <view class="font-size-36 text-score mr30">{{movie.mei_score}}</view>
-            <view class="font-size-24 mr10">猫眼</view>
-            <view class="font-size-36 text-score">{{movie.mao_score}}</view>
+            <view class="font-size-24 mr10">猫眼评分</view>
+            <view class="font-size-36 text-score mr30">{{movie.score}}</view>
         </view>
         <view>{{movie.label}}</view>
-        <view>{{movie.address}} / {{movie.movie_length}}分钟</view>
-        <view>{{movie.release_time}} {{movie.release_country}}</view>
+        <view>{{movie.address}} / {{movie.movie_length}}</view>
+        <view>{{movie.pub_desc}}</view>
     </view>
 </view>

@@ -1,4 +1,8 @@
-
+<view hidden="{{noticeHidden}}" class="fix-top">
+  <van-notice-bar color="#1989fa"
+                  backgroundColor="#ecf9ff"
+                  text="本站严禁提供任何带色 情，违法内容的影片！欢迎大家监督，本站所有资源来源于网友交流,只供网络测试、请在24小时内删除所下内容请大家支持正版到影院观看或购买正版CD!"/>
+</view>
 <view class="icon-box flex flex-center" hidden="{{current === (list.length - 1)}}">
   <image src="../../../images/icons/down.png"
          mode="widthFix"
@@ -11,7 +15,7 @@
         vertical="{{true}}">
     <block wx:for="{{list}}" wx:key="*this">
         <swiper-item class="swiper-item" item-id="{{index}}">
-            <navigator url="/pages/home/detail/index?id={{item.id}}"
+            <navigator url="/pages/home/detail/index?id={{item.movie_id}}"
                        class="box border-shadow">
                 <qike-recommend-item movie="{{item}}"></qike-recommend-item>
             </navigator>

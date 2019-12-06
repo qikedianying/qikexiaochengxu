@@ -8,7 +8,8 @@
     "pages/home/detail/index",
     "pages/h5/dynamic/index",
     "pages/home/article/index",
-    "pages/home/contact/index"
+    "pages/home/contact/index",
+    "pages/help/download/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

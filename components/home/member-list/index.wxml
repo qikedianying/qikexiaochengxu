@@ -6,7 +6,9 @@
              src="{{item.avatar}}"
              mode="aspectFill"></image>
       <view class="font-ellipsis name font-28-333">{{item.name}}</view>
-      <view class="font-ellipsis name font-24-999">{{item.row}}</view>
+      <view class="font-ellipsis name font-24-999">{{item.play_row? item.play_row:'饰：'}}</view>
     </view>
   </block>
 </scroll-view>
+
+<!--本站严禁提供任何带色 情，违法内容的影片！欢迎大家监督，本站所有资源来源于网友交流,只供网络测试、请在24小时内删除所下内容请大家支持正版到影院观看或购买正版CD!-->

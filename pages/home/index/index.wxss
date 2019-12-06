@@ -47,3 +47,10 @@ page {
   75% {opacity: .75;}
   100% {opacity: 0;}
 }
+.fix-top{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}

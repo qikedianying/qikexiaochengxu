@@ -4,17 +4,15 @@
            mode="aspectFill"
            class="avatar"></image>
     <view class="flex space-between flex-column p20">
-      <view class="font-size-48 font-weight-600">{{movieInfo.name}}</view>
+      <view class="font-size-32 font-weight-600">{{movieInfo.name}}</view>
       <view class="font-size-20">{{movieInfo.english_name}}</view>
       <view class="flex mt60">
-        <view class="font-size-24 mr10">美团</view>
-        <view class="font-size-36 text-score mr30">{{movieInfo.mei_score}}</view>
-        <view class="font-size-24 mr10">猫眼</view>
-        <view class="font-size-36 text-score">{{movieInfo.mao_score}}</view>
+        <view class="font-size-24 mr10">猫眼评分</view>
+        <view class="font-size-36 text-score mr30">{{movieInfo.score}}</view>
       </view>
       <view class="font-size-24 mt6">{{movieInfo.label}}</view>
-      <view class="font-size-24 mt6">{{movieInfo.address}}/{{movieInfo.movie_length}}分钟</view>
-      <view class="font-size-24 mt6">{{movieInfo.release_time}}{{movieInfo.release_country}}</view>
+      <view class="font-size-24 mt6">{{movieInfo.address}}/{{movieInfo.movie_length}}</view>
+      <view class="font-size-24 mt6">{{movieInfo.pub_desc}}</view>
     </view>
   </view>
 </view>
